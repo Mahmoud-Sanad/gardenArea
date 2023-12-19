@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Flowrista</string>
+    <string name="recipients_address">Recipients Address</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="register"> <u>Register</u></string>
+    <string name="login"> <u>Login</u></string>
+    <string name="bouquet">bouquet</string>
+</resources>

@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const authController = require('../controllers/authController');
+const flowersController = require('../controllers/flowersController');
+router.route('/register').post(authController.register);
+router.route('/login').post(authController.login);
+router.route('/me').post(authController.me);
+router.route("/addToCart").post(flowersController.addToCart);
+router.route("/cart").post(flowersController.cart);
+router.route("/emptyCart").post(flowersController.emptyCart);
+module.exports = router;

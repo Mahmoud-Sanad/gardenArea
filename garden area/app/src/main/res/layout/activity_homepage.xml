@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomePage"
+    android:id="@+id/drawerLayout"
+    tools:ignore="HardcodedText"
+    android:background="@color/white"
+    >
+<androidx.core.widget.NestedScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    tools:context=".activities.HomePage">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/myToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/myToolbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+
+            android:src="@drawable/flowerlogo" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bouquet"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="10dp"
+            />
+
+
+        <ImageView
+
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignBottom="@+id/myToolbar"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginEnd="10dp"
+
+            android:src="@drawable/cart" />
+
+        <TextView
+
+                    android:layout_below="@id/myToolbar"
+                    android:id="@+id/most"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Most Selling Items"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:padding="20dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/purple"
+                    android:textAlignment="viewStart">
+
+                </TextView>
+    </RelativeLayout>
+    <!--start grid-->
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+
+        android:columnCount="2"
+        android:rowCount="1">
+
+
+
+
+    </GridLayout>
+    <!--end grid-->
+    <LinearLayout
+        android:id="@+id/cat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/grid"
+        android:layout_marginTop="49dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Categories"
+            android:textColor="@color/purple"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/cat">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cat"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/category1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/box"
+                        android:scaleType="centerCrop"
+                        tools:ignore="DuplicateIds" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:background="@color/purple" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/highlightedcat"
+                        android:text="Boxes"
+
+                        android:textColor="#FFFFFF"
+
+                        tools:ignore="DuplicateIds" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="12dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/category2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/bouquet5"
+                        android:scaleType="centerCrop"
+                        tools:ignore="DuplicateIds" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:background="@color/purple" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/highlightedcat2"
+                        android:text="Vases"
+
+                        android:textColor="#FFFFFF"
+
+                        tools:ignore="DuplicateIds" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="12dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/category3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/bouq"
+                        android:scaleType="centerCrop"
+                        tools:ignore="DuplicateIds" />
+
+                </LinearLayout>
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:background="@color/purple" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/highlightedcat3"
+                        android:text="Bouquet"
+
+                        android:textColor="#FFFFFF"
+
+                        tools:ignore="DuplicateIds" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="12dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/category4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/buquet1"
+                        android:scaleType="centerCrop"
+                        tools:ignore="DuplicateIds" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:background="@color/purple" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/highlightedcat4"
+                        android:text="Chocolate"
+                        android:textColor="#FFFFFF"
+
+                        tools:ignore="DuplicateIds" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="12dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/categoryt4"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/buquet1"
+                    android:scaleType="centerCrop"
+                    tools:ignore="DuplicateIds" />
+
+            </LinearLayout>
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="19dp"
+                    android:background="@color/purple" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/highlightedcatt4"
+                    android:text="Chocolate"
+                    android:textColor="#FFFFFF"
+
+                    tools:ignore="DuplicateIds" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+    </HorizontalScrollView>
+
+
+</RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="@color/white"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+
+        app:itemTextColor="@color/black"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>
+
